@@ -78,7 +78,6 @@ div[class*=__container] {max-width:1230px; margin:0 auto; padding:0 15px}
 @media (max-width:570px) {.instruments__container {-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
 }
 .instruments__item {display:block; width:100px}
-.instruments__item:hover {opacity:0.7}
 @media (max-width:1230px) {.instruments__item {width:80px}
 }
 @media (max-width:1054px) {.instruments__item {width:60px}
@@ -86,7 +85,7 @@ div[class*=__container] {max-width:1230px; margin:0 auto; padding:0 15px}
 @media (max-width:798px) {.instruments__item {width:45px}
 }
 .instruments__item img {width:100px; height:100px; margin-bottom:17px; -webkit-transition:all 0.3s ease; -o-transition:all 0.3s ease; transition:all 0.3s ease}
-.instruments__item img:hover {opacity:0.7}
+.instruments__item img:hover {-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
 @media (max-width:1230px) {.instruments__item img {margin-bottom:10px; width:80px; height:80px}
 }
 @media (max-width:1054px) {.instruments__item img {margin-bottom:7px; width:60px; height:60px}
