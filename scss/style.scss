@@ -256,9 +256,7 @@ div[class*="__container"] {
   &__item {
     display: block;
     width: 100px;
-    &:hover {
-      opacity: 0.7;
-    }
+
     @media (max-width: 1230px) {
       width: 80px;
     }
@@ -274,7 +272,7 @@ div[class*="__container"] {
       margin-bottom: 17px;
       transition: all 0.3s ease;
       &:hover {
-        opacity: 0.7;
+        transform: scale(1.1);
       }
       @media (max-width: 1230px) {
         margin-bottom: 10px;
