@@ -46,7 +46,6 @@ body {
   flex-direction: column;
   min-height: 100%;
   overflow-x: hidden;
-  padding-bottom: 51px;
 }
 
 .main {
@@ -760,7 +759,7 @@ div[class*=__container] {
 }
 @media (max-width: 1230px) {
   .description {
-    padding: 35px 0;
+    padding: 35px 0 86px 0px;
   }
 }
 .description__title {
