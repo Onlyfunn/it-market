@@ -343,6 +343,9 @@ div[class*=__container] {
   display: block;
   width: 100px;
 }
+.instruments__item:nth-child(7) .instruments__name {
+  word-wrap: break-word;
+}
 @media (max-width: 1230px) {
   .instruments__item {
     width: 80px;
@@ -395,7 +398,6 @@ div[class*=__container] {
   text-align: center;
   font-size: 14px;
   color: var(--text-color-2);
-  word-wrap: break-word;
 }
 
 .products {
