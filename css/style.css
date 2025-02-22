@@ -350,6 +350,7 @@ div[class*=__container] {
   text-align: center;
   font-size: 14px;
   color: var(--text-color-2);
+  word-wrap: break-word;
 }
 
 .products {
