@@ -46,6 +46,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   overflow-x: hidden;
+  padding-bottom: 51px;
 }
 
 .main {
