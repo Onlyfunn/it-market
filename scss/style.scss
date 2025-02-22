@@ -10,6 +10,7 @@ body.light-theme {
   --hover-color: var(--bgc);
   --hover-2-color: #e2e3e5;
   --span-color: var(--text-color);
+  --icon-color: var(--text-color-2);
 }
 
 body.dark-theme {
@@ -25,6 +26,7 @@ body.dark-theme {
   --hover-2-color: var(--border-color);
   --span-color: var(--main-color);
   --menu-border: #1a1a1a;
+  --icon-color: #fff;
 }
 
 body {
@@ -773,13 +775,13 @@ div[class*="__container"] {
     }
     svg {
       path {
-        stroke: var(--text-color-2);
+        stroke: var(--icon-color);
       }
     }
     p {
       font-size: 10px;
       line-height: 1;
-      color: var(--text-color-2);
+      color: var(--text-color-3);
       margin-top: auto;
       font-weight: 400;
     }
