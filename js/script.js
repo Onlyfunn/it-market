@@ -1,5 +1,5 @@
 var swiper = new Swiper(".swiper-card1", {
-  spaceBetween: 10,
+  spaceBetween: 20,
   initialSlide: 1,
   slidesPerView: 4,
   navigation: {
