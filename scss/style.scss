@@ -15,6 +15,8 @@ body.light-theme {
   --crumbs-color: #0062d2;
   --button-color: var(--bgc);
   --inner-color: var(--text-color);
+  --color-demo: var(--bgc-2);
+  --under-color: var(--bgc);
 }
 
 body.dark-theme {
@@ -35,6 +37,8 @@ body.dark-theme {
   --crumbs-color: var(--text-color-3);
   --button-color: #262626;
   --inner-color: var(--text-color-3);
+  --color-demo: var(--button-color);
+  --under-color: var(--bgc-2);
 }
 
 body {
@@ -45,9 +49,6 @@ body {
   line-height: calc(21 / 16 * 100%);
   color: var(--text-color);
   overflow-x: hidden;
-  @media (min-width: 1620px) {
-    zoom: 125%;
-  }
 }
 
 .wrapper {
@@ -58,7 +59,7 @@ body {
 
 .main {
   flex: 1 1 auto;
-  background-color: var(--bgc-2);
+  background-color: var(--under-color);
 }
 
 div[class*="__container"] {
@@ -314,6 +315,7 @@ div[class*="__container"] {
 .products {
   background-color: var(--bgc-2);
   padding: 0 15px;
+  padding-top: 30px;
   @media (max-width: 798px) {
     padding: 0;
   }
@@ -807,13 +809,21 @@ div[class*="__container"] {
 .inner {
   padding: 50px 0 35px 0;
   background-color: var(--bgc);
+  border-radius: 50px;
+  max-width: 1370px;
+  margin: 50px auto;
 
   &__title {
     font-size: 36px;
     font-weight: 600;
     color: var(--text-color);
-
     line-height: 1;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
   &__container {
   }
@@ -870,8 +880,6 @@ div[class*="__container"] {
 
     .swiper {
       width: 100%;
-      padding-right: 17.5px;
-      margin-left: 0px;
     }
     .swiper-card2 {
       height: 515px;
@@ -887,6 +895,27 @@ div[class*="__container"] {
         border-radius: 15px;
         overflow: hidden;
         cursor: pointer;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #000;
+          opacity: 0;
+          transition: all 0.3s ease;
+        }
+        &:hover {
+          &::after {
+            opacity: 0.5;
+          }
+          img {
+            transform: scale(1.25);
+          }
+        }
       }
       img {
         position: absolute;
@@ -897,22 +926,23 @@ div[class*="__container"] {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: all 0.3s ease;
       }
     }
     .swiper-card1 {
-      width: 100%;
+      width: calc(100%);
       height: 118px;
       border-radius: 15px;
       margin-bottom: 55px;
+      padding: 0 15px;
 
       .swiper-wrapper {
         width: 100%;
-        position: static;
-        gap: 10px;
+        position: relative;
       }
       .swiper-slide {
         margin-bottom: 19px;
-        width: 172px !important;
+        width: calc(25% - 15px) !important;
         border-radius: 8px;
         overflow: hidden;
         z-index: 2;
@@ -944,6 +974,21 @@ div[class*="__container"] {
         z-index: 100;
         position: absolute;
         right: 0;
+        &::after {
+          font-size: 12px;
+          font-weight: 600;
+          color: var(--text-color);
+        }
+      }
+      .swiper-button-prev {
+        width: 32px;
+        height: 32px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        background-color: var(--button-color);
+        border-radius: 50%;
+        z-index: 100;
+        position: absolute;
+        left: 0px;
         &::after {
           font-size: 12px;
           font-weight: 600;
@@ -1100,13 +1145,19 @@ div[class*="__container"] {
   width: 100%;
   background-color: var(--bgc);
   padding-top: 10px;
+  position: relative;
+
   &__buy {
     padding-top: 25px;
-    position: sticky;
-    top: 0;
     z-index: 1;
     margin-left: -15px;
     padding-left: 15px;
+  }
+  &__inner {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 70%;
   }
 }
 .buy {
@@ -1187,10 +1238,10 @@ div[class*="__container"] {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    background-color: var(--bgc-2);
+    background-color: var(--color-demo);
     color: var(--text-color);
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1;
     transition: all 0.3s ease;
     cursor: pointer;
@@ -1218,6 +1269,7 @@ div[class*="__container"] {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   transition: all 0.3s ease;
+  cursor: auto;
   &:hover {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   }
@@ -1274,15 +1326,19 @@ div[class*="__container"] {
     color: var(--text-color);
     line-height: calc(18 / 16 * 100%);
     position: relative;
+    transition: all 0.3s ease;
     &::after {
       content: "";
       position: absolute;
       bottom: 4px;
-      right: 15px;
+      right: 12px;
       width: 12.5px;
       height: 10px;
       background-image: url(../img/buy/mail.svg);
       background-size: 100%;
+    }
+    &:hover {
+      color: var(--main-color);
     }
   }
 }
