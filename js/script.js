@@ -37,10 +37,10 @@ if ($("#header").length) {
   $(window).on("scroll", function () {
     console.log("123");
     const scrolled = $(window).scrollTop();
-    if (scrolled > 100 && scrolled > prevScroll) {
+    if (scrolled > 0 && scrolled > prevScroll) {
       $header.addClass("header-out");
       lastShowPos = scrolled;
-    } else if (scrolled <= Math.max(lastShowPos - 250, 0)) {
+    } else if (scrolled <= Math.max(lastShowPos - 0, 0)) {
       $header.removeClass("header-out");
     }
     prevScroll = scrolled;
