@@ -19,7 +19,7 @@ if (document.querySelector(".swiper-card2")) {
 }
 if (document.querySelector(".user-stories-swiper")) {
   new Swiper(".user-stories-swiper", {
-    spaceBetween: 10,
+    spaceBetween: 20,
     loop: false,
     slidesPerView: "auto",
   });
