@@ -1923,7 +1923,6 @@ a:hover {
   transition-property: transform;
   transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
   box-sizing: content-box;
-  gap: 20px;
 }
 .widget-stories-container .swiper-wrapper {
   transform: translate3d(0px, 0, 0);
