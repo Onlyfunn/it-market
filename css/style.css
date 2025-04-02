@@ -607,6 +607,12 @@ div[class*=__container] {
   margin-right: -15px;
   padding: 15px;
   margin-bottom: 50px;
+  @media(max-width: 1230px){
+    margin-bottom: 30px;
+  }
+  @media(max-width: 1054px){
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 798px) {
   .products__cards._spec {
