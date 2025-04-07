@@ -607,12 +607,6 @@ div[class*=__container] {
   margin-right: -15px;
   padding: 15px;
   margin-bottom: 50px;
-  @media(max-width: 1230px){
-    margin-bottom: 30px;
-  }
-  @media(max-width: 1054px){
-    margin-bottom: 20px;
-  }
 }
 @media (max-width: 798px) {
   .products__cards._spec {
@@ -1201,6 +1195,9 @@ div[class*=__container] {
     display: none;
   }
 }
+.left-body .tab-content {
+  min-height: 400px;
+}
 .left-body .tab-content__text {
   font-size: 16px;
   font-weight: 400;
@@ -1274,7 +1271,7 @@ div[class*=__container] {
   position: sticky;
   top: 0;
   z-index: 1;
-  height: 70%;
+  height: 50%;
 }
 
 .buy::after {
