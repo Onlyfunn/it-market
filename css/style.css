@@ -1195,9 +1195,6 @@ div[class*=__container] {
     display: none;
   }
 }
-.left-body .tab-content {
-  min-height: 400px;
-}
 .left-body .tab-content__text {
   font-size: 16px;
   font-weight: 400;
@@ -1271,6 +1268,7 @@ div[class*=__container] {
   position: sticky;
   top: 0;
   z-index: 1;
+  min-height: 940px;
   height: 50%;
 }
 
