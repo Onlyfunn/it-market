@@ -108,7 +108,7 @@
 
             <div class="inner__body body-inner">
               <div class="body-inner__left left-body">
-                <div class="left-body__services services">
+                <div class="left-body__services services version-1">
                   <p class="services__title">
                     Подключите услуги, чтобы максимально привлечь внимания к
                     объявлению
@@ -407,15 +407,37 @@
                         <p class="buy__credit-text-2">от 3500 ₽ в месяц</p>
                       </div>
                     </div>
-                    <a
-                      href="#"
-                      title="Купить ща 96000"
-                      class="buy__button button-blue"
-                      >Купить за 96 000 ₽
-                    </a>
-                    <a href="#" title="Смотреть демо-версию" class="buy__button"
-                      >Смотреть демо-версию</a
-                    >
+                    <div class="buy__buttons version-1">
+                      <a
+                        href="#"
+                        title="Редактировать"
+                        class="buy__button button-blue"
+                        >Редактировать
+                      </a>
+                      <a href="#" title="Снять с публикации" class="buy__button"
+                        >Снять с публикации</a
+                      >
+                    </div>
+                    <div class="buy__buttons version-2" style="display: none">
+                      <a
+                        href="#"
+                        title="Купить"
+                        class="buy__button button-green"
+                        >Купить
+                      </a>
+                      <a
+                        href="#"
+                        title="В корзину"
+                        class="buy__button button-black"
+                        >В корзину</a
+                      >
+                      <a
+                        href="#"
+                        title="Смотреть демо-версию"
+                        class="buy__button"
+                        >Смотреть демо-версию</a
+                      >
+                    </div>
                     <div class="buy__seller seller-buy">
                       <a
                         href="#"
@@ -465,7 +487,31 @@
                       </div>
                     </div>
                   </div>
-                  <div class="right-body__buttons">
+                  <div
+                    class="right-body__write write version-2"
+                    style="display: none"
+                  >
+                    <div class="write__main">
+                      <div class="write__icon">
+                        <img src="img/icon/main-icon.png" alt="write-icon" />
+                      </div>
+                      <div class="write__inner">
+                        <div class="write__title">it-marketplace</div>
+                        <div class="write__reports">
+                          <div class="write__stars">
+                            <img src="img/stars/full-2.svg" alt="star" />
+                            <img src="img/stars/full-2.svg" alt="star" />
+                            <img src="img/stars/full-2.svg" alt="star" />
+                            <img src="img/stars/full-2.svg" alt="star" />
+                            <img src="img/stars/empty-2.svg" alt="star" />
+                          </div>
+                          <p class="write__report">1 отзыв</p>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="" class="write__button">Написать продавцу</a>
+                  </div>
+                  <div class="right-body__buttons version-1">
                     <a href="#" class="right-body__button">
                       <img src="img/svg-icons/card.png" alt="" />
                       <p>0</p>
@@ -479,7 +525,10 @@
                       <p>1</p>
                     </a>
                   </div>
-                  <div class="right-body__verify verify">
+                  <div
+                    class="right-body__verify verify version-2"
+                    style="display: none"
+                  >
                     <p class="verify__title">Пользователь верифицирован ✔️</p>
                     <p class="verify__text">
                       Мы проверили и сверили паспорт и фото пользователя
@@ -1246,6 +1295,10 @@
 
     <script
       src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
       defer
     ></script>
     <script src="js/theme.js" defer></script>
